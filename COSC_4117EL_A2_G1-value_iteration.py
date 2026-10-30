@@ -34,7 +34,7 @@ Generative AI note: implementation was drafted with assistance from Doubao
 
 import json
 import os
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 import matplotlib
 

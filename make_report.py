@@ -287,7 +287,7 @@ for cfg_eval, label in ((A_eval, "A"), (B_eval, "B")):
         rows.append([label, str(ps["seed"]), f"{ps['avg_return']:.2f}",
                      f"{ps['success_rate']:.3f}", f"{ps['avg_steps']:.1f}"])
     rows.append([label, "mean +/- std",
-                 f"{cfg_eval["avg_return_mean"]:.2f} +/- {cfg_eval['avg_return_std']:.2f}",
+                 f"{cfg_eval['avg_return_mean']:.2f} +/- {cfg_eval['avg_return_std']:.2f}",
                  f"{cfg_eval['success_rate_mean']:.3f}",
                  f"{cfg_eval['avg_steps_mean']:.1f}"])
 table(rows, col_widths=[2.4 * cm, 3.0 * cm, 4.0 * cm, 3.0 * cm, 2.6 * cm])
