@@ -1,0 +1,148 @@
+{
+  "layout_seed": 99,
+  "training_seeds": [
+    42,
+    7,
+    123
+  ],
+  "eval_episodes": 500,
+  "chosen_config": "A_conservative",
+  "part2": {
+    "configs": {
+      "A_conservative": {
+        "cfg": {
+          "alpha": 0.1,
+          "gamma": 0.95,
+          "eps_start": 1.0,
+          "eps_end": 0.01,
+          "eps_decay": 0.9995,
+          "episodes": 8000
+        },
+        "eval": {
+          "avg_return_mean": 98.77866666666667,
+          "avg_return_std": 3.489422238072595,
+          "success_rate_mean": 1.0,
+          "avg_steps_mean": 32.840666666666664,
+          "per_seed": [
+            {
+              "seed": 42,
+              "avg_return": 101.276,
+              "success_rate": 1.0,
+              "avg_steps": 32.108
+            },
+            {
+              "seed": 7,
+              "avg_return": 93.844,
+              "success_rate": 1.0,
+              "avg_steps": 34.33
+            },
+            {
+              "seed": 123,
+              "avg_return": 101.216,
+              "success_rate": 1.0,
+              "avg_steps": 32.084
+            }
+          ]
+        }
+      },
+      "B_fast_adapting": {
+        "cfg": {
+          "alpha": 0.5,
+          "gamma": 0.99,
+          "eps_start": 1.0,
+          "eps_end": 0.01,
+          "eps_decay": 0.999,
+          "episodes": 8000
+        },
+        "eval": {
+          "avg_return_mean": 51.26,
+          "avg_return_std": 63.16282729580746,
+          "success_rate_mean": 0.8346666666666667,
+          "avg_steps_mean": 53.61866666666666,
+          "per_seed": [
+            {
+              "seed": 42,
+              "avg_return": 100.208,
+              "success_rate": 1.0,
+              "avg_steps": 32.588
+            },
+            {
+              "seed": 7,
+              "avg_return": 91.496,
+              "success_rate": 1.0,
+              "avg_steps": 32.896
+            },
+            {
+              "seed": 123,
+              "avg_return": -37.924,
+              "success_rate": 0.504,
+              "avg_steps": 95.372
+            }
+          ]
+        }
+      }
+    },
+    "training_seeds": [
+      42,
+      7,
+      123
+    ],
+    "p": 0.8,
+    "chosen_seed": 42
+  },
+  "part3": {
+    "comparison": [
+      {
+        "p": 1.0,
+        "vi_iterations": 38,
+        "vi_avg_return": 131.0,
+        "vi_success_rate": 1.0,
+        "vi_avg_steps": 24.0,
+        "ql_avg_return_mean": 131.0,
+        "ql_avg_return_std": 0.0,
+        "ql_success_rate_mean": 1.0,
+        "ql_avg_steps_mean": 24.0,
+        "ql_vi_policy_agreement_mean": 0.7043478260869565,
+        "ql_vi_policy_agreement_std": 0.027726270245955083,
+        "ql_vi_policy_agreement_on_visited_mean": 1.0,
+        "ql_vi_policy_agreement_on_visited_std": 0.0,
+        "n_visited_states": 25.0,
+        "ql_convergence_episode_median": 899
+      },
+      {
+        "p": 0.9,
+        "vi_iterations": 68,
+        "vi_avg_return": 118.364,
+        "vi_success_rate": 1.0,
+        "vi_avg_steps": 27.506,
+        "ql_avg_return_mean": 118.35466666666667,
+        "ql_avg_return_std": 0.007542472332659026,
+        "ql_success_rate_mean": 1.0,
+        "ql_avg_steps_mean": 27.50733333333333,
+        "ql_vi_policy_agreement_mean": 0.7246376811594203,
+        "ql_vi_policy_agreement_std": 0.010845383729779516,
+        "ql_vi_policy_agreement_on_visited_mean": 0.9545219638242894,
+        "ql_vi_policy_agreement_on_visited_std": 0.017737470079308003,
+        "n_visited_states": 44.666666666666664,
+        "ql_convergence_episode_median": 951
+      },
+      {
+        "p": 0.8,
+        "vi_iterations": 86,
+        "vi_avg_return": 101.36,
+        "vi_success_rate": 1.0,
+        "vi_avg_steps": 32.104,
+        "ql_avg_return_mean": 101.36399999999999,
+        "ql_avg_return_std": 0.17254178237942186,
+        "ql_success_rate_mean": 1.0,
+        "ql_avg_steps_mean": 32.14266666666666,
+        "ql_vi_policy_agreement_mean": 0.7159420289855073,
+        "ql_vi_policy_agreement_std": 0.020801014629575815,
+        "ql_vi_policy_agreement_on_visited_mean": 0.9405337848734076,
+        "ql_vi_policy_agreement_on_visited_std": 0.01843031329881637,
+        "n_visited_states": 52.0,
+        "ql_convergence_episode_median": 1282
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "1.00": {
+    "VI": {
+      "mean_congestion_entries": 1.0,
+      "mean_blocked_moves": 0.0,
+      "mean_length": 24.0,
+      "success_rate": 1.0
+    },
+    "QL": {
+      "mean_congestion_entries": 1.0,
+      "mean_blocked_moves": 0.0,
+      "mean_length": 24.0,
+      "success_rate": 1.0
+    }
+  },
+  "0.90": {
+    "VI": {
+      "mean_congestion_entries": 1.442,
+      "mean_blocked_moves": 1.57,
+      "mean_length": 27.506,
+      "success_rate": 1.0
+    },
+    "QL": {
+      "mean_congestion_entries": 1.444,
+      "mean_blocked_moves": 1.564,
+      "mean_length": 27.508,
+      "success_rate": 1.0
+    }
+  },
+  "0.80": {
+    "VI": {
+      "mean_congestion_entries": 2.064,
+      "mean_blocked_moves": 3.632,
+      "mean_length": 32.104,
+      "success_rate": 1.0
+    },
+    "QL": {
+      "mean_congestion_entries": 2.018,
+      "mean_blocked_moves": 3.64,
+      "mean_length": 32.292,
+      "success_rate": 1.0
+    }
+  }
+}
