@@ -14,6 +14,7 @@ motion model required by the brief (see the change log in the file header).
 | `warehouse_gridworld_domain_random.py` | Provided environment, extended with `intended_prob` (stochastic transitions), `sample_realized_action()` and a pure `transition_kernel()` used by both the simulator and Value Iteration. |
 | `COSC_4117EL_A2_G1-value_iteration.py` | **Part 1 + Part 3 (DP side).** Builds the known MDP, runs Value Iteration for p = 1.00 / 0.90 / 0.80, extracts policies, evaluates them, and saves policy figures, the convergence figure and `results/vi_results.json`. |
 | `COSC_4117EL_A2_G1-q_learning.py` | **Part 2 + Part 3 (RL side).** Tabular Q-Learning with epsilon-greedy exploration and geometric epsilon decay; two hyperparameter configurations over three seeds; greedy evaluation; Part 3 comparison against the Value Iteration results; learning curves, policy and trajectory figures; `results/ql_results.json`. |
+| `COSC_4117EL_A2_G1-ui.py` | **Optional** interactive pygame viewer (not required for grading): policy arrows and value heat map per phase, switch p and VI / Q-Learning, animated roll-outs with slips, live Q-Learning training with a learning curve. Imports the existing scripts; writes no files. |
 | `route_analysis.py` | Supplementary Part 3 analysis: counts congestion-zone entries, blocked moves and path lengths for each method and p (`results/route_analysis.json`). |
 | `make_report.py` | Regenerates the PDF report (`COSC_4117EL_A2_G1_Report.pdf`) from the JSON results and figures. |
 | `COSC_4117EL_A2_G1_Report.pdf` | The report (MDP formulation, implementation, experiments, comparison, analysis). |
@@ -61,6 +62,20 @@ python warehouse_gridworld_domain_random.py
 All figures are written to `figures/` and all numerical results to
 `results/`. The scripts are headless (`matplotlib` Agg backend) and never
 open the pygame window during training.
+
+## Optional interactive viewer
+
+```bash
+python COSC_4117EL_A2_G1-ui.py
+```
+
+Opens a pygame window (needs `pygame`). Value Iteration is computed for
+p = 1.00 / 0.90 / 0.80 at start-up; press **T** to train Q-Learning live for the
+selected p (config A, seed 42, 6000 episodes - the same loop and seeding as
+`train_q_learning`, so it reaches the same Q-table). Keys: V/Q method, 1/2/3 p,
+Tab phase, A arrows, H heat map, Space play, N step, R new run, E evaluate,
++/- speed, Esc quit. Hover a cell to see Q(s,a) for the four actions.
+The viewer does not modify `figures/` or `results/`.
 
 ## Fixed experimental settings
 
